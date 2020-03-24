@@ -1,5 +1,5 @@
 ---
-title: "COVID-19 Time Series Heatmaps (US)"
+title: "COVID-19 Confirmed Cases Time Series (US)"
 author: "William Norfolk"
 date: "`r Sys.Date()`"
 output: 
@@ -7,7 +7,7 @@ output:
     highlight: espresso
 ---
 
-Time series heatmaps of the COVID-19 progression through the United States beginning March 19th, 2020. Raw data sourced from the Johns Hopkins Center for Systems Science and Engineering (CCSE) data repository found as [this link](https://github.com/CSSEGISandData/COVID-19). 
+Time series heatmaps of the COVID-19 progression through the United States beginning March 21st, 2020. Raw data sourced from the Johns Hopkins Center for Systems Science and Engineering (CCSE) data repository found as [this link](https://github.com/CSSEGISandData/COVID-19). 
 
 Data visualizations are updated daily following the public release of new raw data, and typically lag ~12 hours behind the release of new data. All raw data records are publically available from CCSE under the data folder titled csse_covid_19_daily_reports. Time series data used in the generation of these figures consist of confirmed case reports from the contiguous US as well as Alaska and Hawaii. Washington DC cases are included in the data. All US cases registered under territories, cruise ships, and evacuees are excluded from the final data.   
 
@@ -15,21 +15,19 @@ Data visualizations are updated daily following the public release of new raw da
 
 ## 3/23/2020
 
-```{r 6Fig, fig.cap="COVID-19 cases by state as of 3/23/2020", out.height = "90%", out.width = "90%", fig.align='center', echo=FALSE}
+```{r 6Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
 knitr::include_graphics("../heat_maps/case_state_3_23.png")
-
+knitr::include_graphics("../bar_charts/cases_3_23_bar.png")
 ```
+
 
 ## 3/22/2020
 
-```{r 3Fig, fig.cap="COVID-19 cases by state as of 3/22/2020", out.height = "90%", out.width = "90%", fig.align='center', echo=FALSE}
+```{r 3Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
 knitr::include_graphics("../heat_maps/case_state_3_22.png")
+#knitr::include_graphics("../bar_charts/cases_3_22_bar.png")
 
 ```
-
-## 3/21/2020
-
-
 
 
 
@@ -37,22 +35,19 @@ knitr::include_graphics("../heat_maps/case_state_3_22.png")
 
 ## 3/23/2020
 
-```{r 5Fig, fig.cap="COVID-19 cases per 100k individuals by state as of 3/23/2020", out.height = "90%", out.width = "90%", fig.align='center', echo=FALSE}
+```{r 5Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
 knitr::include_graphics("../heat_maps/cases_100k_3_23.png")
+knitr::include_graphics("../bar_charts/cases_100k_3_23_bar.png")
 
 ```
 
 ## 3/22/2020
 
-```{r 2Fig, fig.cap="COVID-19 cases per 100k individuals by state as of 3/22/2020", out.height = "90%", out.width = "90%", fig.align='center', echo=FALSE}
+```{r 2Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
 knitr::include_graphics("../heat_maps/cases_100k_3_22.png")
+#knitr::include_graphics("../bar_charts/cases_100k_3_22_bar.png")
 
 ```
-
-## 3/21/2020
-
-
-
 
 
 
@@ -61,19 +56,19 @@ knitr::include_graphics("../heat_maps/cases_100k_3_22.png")
 ## 3/23/2020-3/22/2020
 
 
-```{r 4Fig, fig.cap="Percent increase in total COVID-19 cases by state", out.height = "90%", out.width = "90%", fig.align='center', echo=FALSE}
+```{r 4Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
 knitr::include_graphics("../heat_maps/p_increase_cases_22_to_23.png")
+knitr::include_graphics("../bar_charts/perc_increase_3_23_bar.png")
 
 ```
 
 ## 3/22/2020-3/21/2020
 
-```{r 1Fig, fig.cap="Percent increase in total COVID-19 cases by state", out.height = "90%", out.width = "90%", fig.align='center', echo=FALSE}
+```{r 1Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
 knitr::include_graphics("../heat_maps/p_increase_cases_21_to_22.png")
-
+#knitr::include_graphics("../bar_charts/perc_increase_3_22_bar.png")
 ```
 
-## 3/21/2020
 
 
 
