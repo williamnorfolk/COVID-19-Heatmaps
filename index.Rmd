@@ -1,0 +1,24 @@
+---
+title: "COVID-19 Time Series Heatmaps (US)"
+author: "William Norfolk"
+date: "`r Sys.Date()`"
+output: 
+ rmdformats::readthedown:
+    highlight: espresso
+---
+
+
+```{r 1Fig, fig.cap="COVID-19 cases by state as of 3/22/2020", out.height = "90%", out.width = "90%", fig.align='center', echo=FALSE}
+knitr::include_graphics("../heat_maps/case_state_3_22.png")
+
+```
+
+```{r 2Fig, fig.cap="COVID-19 cases per 100k individuals by state as of 3/22/2020", out.height = "90%", out.width = "90%", fig.align='center', echo=FALSE}
+knitr::include_graphics("../heat_maps/cases_100k_3_22.png")
+
+```
+
+```{r 3Fig, fig.cap="Percent increase in total COVID-19 cases by state", out.height = "90%", out.width = "90%", fig.align='center', echo=FALSE}
+knitr::include_graphics("../heat_maps/p_increase_cases_21_to_22.png")
+
+```
