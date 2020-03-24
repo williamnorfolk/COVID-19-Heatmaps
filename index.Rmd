@@ -9,17 +9,17 @@ output:
 
 ## 3/23/2020
 
-```{r 3Fig, fig.cap="COVID-19 cases by state as of 3/23/2020", out.height = "90%", out.width = "90%", fig.align='center', echo=FALSE}
+```{r 6Fig, fig.cap="COVID-19 cases by state as of 3/23/2020", out.height = "90%", out.width = "90%", fig.align='center', echo=FALSE}
 knitr::include_graphics("../heat_maps/case_state_3_23.png")
 
 ```
 
-```{r 2Fig, fig.cap="COVID-19 cases per 100k individuals by state as of 3/23/2020", out.height = "90%", out.width = "90%", fig.align='center', echo=FALSE}
+```{r 5Fig, fig.cap="COVID-19 cases per 100k individuals by state as of 3/23/2020", out.height = "90%", out.width = "90%", fig.align='center', echo=FALSE}
 knitr::include_graphics("../heat_maps/cases_100k_3_23.png")
 
 ```
 
-```{r 1Fig, fig.cap="Percent increase in total COVID-19 cases by state", out.height = "90%", out.width = "90%", fig.align='center', echo=FALSE}
+```{r 4Fig, fig.cap="Percent increase in total COVID-19 cases by state", out.height = "90%", out.width = "90%", fig.align='center', echo=FALSE}
 knitr::include_graphics("../heat_maps/p_increase_cases_22_to_23.png")
 
 ```
