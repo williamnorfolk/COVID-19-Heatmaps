@@ -5,13 +5,28 @@ date: "`r Sys.Date()`"
 output: 
  rmdformats::readthedown:
     highlight: espresso
+    lightbox: true
+    gallery: true
+    thumbnails: false
+    use_bookdown: false
 ---
 
 Time series heatmaps of the COVID-19 progression through the United States beginning March 21st, 2020. Raw data sourced from the Johns Hopkins Center for Systems Science and Engineering (CCSE) data repository found as [this link](https://github.com/CSSEGISandData/COVID-19). 
 
-Data visualizations are updated daily following the public release of new raw data, and typically lag ~12 hours behind the release of new data. All raw data records are publically available from CCSE under the data folder titled csse_covid_19_daily_reports. Time series data used in the generation of these figures consist of confirmed case reports from the contiguous US as well as Alaska and Hawaii. Washington DC cases are included in the data. All US cases registered under territories, cruise ships, and evacuees are excluded from the final data.   
+Data visualizations are updated daily following the public release of new raw data, and typically lag ~12 hours behind the release of new data. All raw data records are publicly available from CCSE under the data folder titled csse_covid_19_daily_reports. Time series data used in the generation of these figures consist of confirmed case reports from the contiguous US as well as Alaska and Hawaii. Washington DC cases are included in the data. All US cases registered under territories, cruise ships, and evacuees are excluded from the final data.   
 
-# Daily Confirmed COVID-19 Cases by State
+# Daily Confirmed Cases
+
+These data illustrate the CCSE reported confirmed COVID-19 cases by state. The US heatmaps (left) show the total cases per state as a red color gradient where darker red indicates a higher number of confirmed cases within the state. Bar charts (right) illustrate the ten states with the highest number of confirmed COVID-19 cases at the point of data publication. 
+
+
+
+## 3/24/2020
+
+```{r 8Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
+knitr::include_graphics("../heat_maps/case_state_3_24.png")
+knitr::include_graphics("../bar_charts/cases_3_24_bar.png")
+```
 
 ## 3/23/2020
 
@@ -25,48 +40,64 @@ knitr::include_graphics("../bar_charts/cases_3_23_bar.png")
 
 ```{r 3Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
 knitr::include_graphics("../heat_maps/case_state_3_22.png")
-#knitr::include_graphics("../bar_charts/cases_3_22_bar.png")
+knitr::include_graphics("../bar_charts/cases_3_22_bar.png")
 
 ```
 
 
 
-# Confirmed COVID-19 Cases Per 100k Population by State
+# Cases Per 100k Population 
+
+These data illustrate  the number of confirmed COVID-19 by state as the number of cases per 100,000 individuals residing in that state according the US Census Bureau's 2019 July population estimate. The US heatmaps (left) show the cases per 100k individuals within a state as a red color gradient where darker red indicates a higher number of cases per 100k. Bar charts (right) illustrate  the ten states with the highest number of cases per 100k individuals at the point of data publication. State population data was obtained through the US Census Bureau website at this [link](https://www.census.gov/data/tables/time-series/demo/popest/2010s-state-total.html).
+
+## 3/24/2020
+
+```{r 9Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
+knitr::include_graphics("../heat_maps/cases_100k_3_24.png")
+knitr::include_graphics("../bar_charts/cases_100k_3_24_bar.png")
+```
 
 ## 3/23/2020
 
 ```{r 5Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
 knitr::include_graphics("../heat_maps/cases_100k_3_23.png")
 knitr::include_graphics("../bar_charts/cases_100k_3_23_bar.png")
-
 ```
 
 ## 3/22/2020
 
 ```{r 2Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
 knitr::include_graphics("../heat_maps/cases_100k_3_22.png")
-#knitr::include_graphics("../bar_charts/cases_100k_3_22_bar.png")
+knitr::include_graphics("../bar_charts/cases_100k_3_22_bar.png")
 
 ```
 
 
 
-# Daily Percent Increase in Total COVID-19 Cases by State
+# Daily Percent Increase in Cases
 
-## 3/23/2020-3/22/2020
+These data illustrate  the daily percent increases in the total number of confirmed COVID-19 cases by state. Daily percent increase compares the confirmed case total of the prior day to the new case total for the current date of the data. The US heatmaps (left) show the daily percent increase within a state as a red color gradient where darker red indicates a greater percent increase. Bar charts (right) illustrate  the ten states with the highest percent increase in COVID-19 cases between the two days measured. Daily percent increase is strongly influenced by the availability  of COVID-19 testing and the prior number of confirmed cases within a state. Sudden spikes in percent increase on a given day may not reflect an increase in disease incidence, but rather an increase in the availability  of testing. 
+
+## 3/23/2020-3/24/2020
+
+```{r 10Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
+knitr::include_graphics("../heat_maps/p_increase_cases_23_to_24.png")
+knitr::include_graphics("../bar_charts/perc_increase_3_24_bar.png")
+```
+
+## 3/22/2020-3/23/2020
 
 
 ```{r 4Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
 knitr::include_graphics("../heat_maps/p_increase_cases_22_to_23.png")
 knitr::include_graphics("../bar_charts/perc_increase_3_23_bar.png")
-
 ```
 
-## 3/22/2020-3/21/2020
+## 3/21/2020-3/22/2020
 
 ```{r 1Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
 knitr::include_graphics("../heat_maps/p_increase_cases_21_to_22.png")
-#knitr::include_graphics("../bar_charts/perc_increase_3_22_bar.png")
+knitr::include_graphics("../bar_charts/perc_increase_3_22_bar.png")
 ```
 
 
