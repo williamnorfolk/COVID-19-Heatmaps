@@ -11,6 +11,8 @@ output:
     use_bookdown: false
 ---
 
+Test
+
 Time series heatmaps of the COVID-19 progression through the United States beginning March 21st, 2020. Raw data sourced from the Johns Hopkins Center for Systems Science and Engineering (CCSE) data repository found at [this link](https://github.com/CSSEGISandData/COVID-19). 
 
 Data visualizations are updated daily following the public release of new raw data, and typically lag ~2 hours behind the release of new data. All raw data records are publicly available from CCSE under the data folder titled csse_covid_19_daily_reports. Time series data used in the generation of these figures consist of confirmed case reports from the contiguous US as well as Alaska and Hawaii. Washington DC cases are included in the data. All US cases registered under territories, cruise ships, and evacuees are excluded from the final data.   
