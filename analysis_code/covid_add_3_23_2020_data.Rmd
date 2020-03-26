@@ -13,12 +13,12 @@ library(usmap)
 ```
 
 ```{r}
-covid_master <- readRDS("./clean_covid_data.rds")
+covid_master <- readRDS("../clean_covid_data.rds")
 ```
 
 
 ```{r}
-covid_3_23 <- readr::read_csv("./raw_data/covid_03-23-2020_update.csv")
+covid_3_23 <- readr::read_csv("../raw_data/covid_03-23-2020_update.csv")
 ```
 
 
@@ -109,7 +109,7 @@ cases_3_23_bar
 ```
 
 ```{r}
-ggsave(filename = "./bar_charts/cases_3_23_bar.png", plot = cases_3_23_bar)
+ggsave(filename = "../bar_charts/cases_3_23_bar.png", plot = cases_3_23_bar)
 ```
 
 #### Heatmaps
@@ -125,7 +125,7 @@ case_state_3_23
 ```
 
 ```{r}
-ggsave(filename = "./heat_maps/case_state_3_23.png", plot = case_state_3_23)
+ggsave(filename = "../heat_maps/case_state_3_23.png", plot = case_state_3_23)
 ```
 
 ## Percent Increase Examples
@@ -156,7 +156,7 @@ p_increase_cases_22_to_23
 ```
 
 ```{r}
-ggsave(filename = "./heat_maps/p_increase_cases_22_to_23.png", plot = p_increase_cases_22_to_23)
+ggsave(filename = "../heat_maps/p_increase_cases_22_to_23.png", plot = p_increase_cases_22_to_23)
 ```
 
 ## Cases per 100K Population
@@ -183,7 +183,7 @@ cases_100k_3_23
 ```
 
 ```{r}
-ggsave(filename = "./heat_maps/cases_100k_3_23.png", plot = cases_100k_3_23)
+ggsave(filename = "../heat_maps/cases_100k_3_23.png", plot = cases_100k_3_23)
 ```
 
 ```{r}
@@ -224,7 +224,7 @@ cases_100k_3_23_bar
 ```
 
 ```{r}
-ggsave(filename = "./bar_charts/cases_100k_3_23_bar.png", plot = cases_100k_3_23_bar)
+ggsave(filename = "../bar_charts/cases_100k_3_23_bar.png", plot = cases_100k_3_23_bar)
 ```
 
 ```{r}
@@ -256,7 +256,7 @@ perc_increase_3_23_bar <- ggplot(top_ten_perc_increase, aes(x = reorder(Province
   panel.grid.major = element_blank(),
   panel.grid.minor = element_blank(),
   axis.line = element_line(colour = "black"),
-  panel.background = element_blank()) + xlab("") + ylab("Percent Increase") + ggtitle("COVID-19: Top Ten COVID-19 Percent Increase by State 3/23/2020") +
+  panel.background = element_blank()) + xlab("") + ylab("Percent Increase") + ggtitle("COVID-19: Top Ten Percent Increase by State from 3/22/20-3/23/20") +
   
    geom_text(aes(label = round(percent_increase, 2)), size = 4, position = position_stack(vjust = 0.8))
 
@@ -264,7 +264,7 @@ perc_increase_3_23_bar
 ```
 
 ```{r}
-ggsave(filename = "./bar_charts/perc_increase_3_23_bar.png", plot = perc_increase_3_23_bar)
+ggsave(filename = "../bar_charts/perc_increase_3_23_bar.png", plot = perc_increase_3_23_bar)
 ```
 
 

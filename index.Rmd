@@ -90,7 +90,7 @@ knitr::include_graphics("./bar_charts/cases_100k_3_22_bar.png")
 
 # Daily Percent Increase in Cases {.tabset}
 
-These data illustrate  the daily percent increases in the total number of confirmed COVID-19 cases by state. Daily percent increase compares the confirmed case total of the prior day to the new case total for the current date of the data. The US heatmaps (left) show the daily percent increase within a state as a red color gradient where darker red indicates a greater percent increase. Bar charts (right) illustrate  the ten states with the highest percent increase in COVID-19 cases between the two days measured. Daily percent increase is strongly influenced by the availability  of COVID-19 testing and the prior number of confirmed cases within a state. Sudden spikes in percent increase on a given day may not reflect an increase in disease incidence, but rather an increase in the availability  of testing. 
+These data illustrate the daily percent increases in the total number of confirmed COVID-19 cases by state. Daily percent increase compares the confirmed case total of the prior day to the new case total for the current date of the data. The US heatmaps (left) show the daily percent increase within a state as a red color gradient where darker red indicates a greater percent increase. Bar charts (right) illustrate the ten states with the highest percent increase in COVID-19 cases between the 24 hourse of measurement. Daily percent increase is strongly influenced by the availability  of COVID-19 testing and the prior number of confirmed cases within a state. Sudden spikes in percent increase on a given day may not reflect an increase in disease incidence, but rather an increase in the availability of testing. 
 
 ## 3/24/2020-3/25/2020
 
@@ -119,6 +119,17 @@ knitr::include_graphics("./bar_charts/perc_increase_3_23_bar.png")
 ```{r 1Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
 knitr::include_graphics("./heat_maps/p_increase_cases_21_to_22.png")
 knitr::include_graphics("./bar_charts/perc_increase_3_22_bar.png")
+```
+
+# 36 Hour Percent Increase in Cases {.tabset}
+
+These data illustrate the 36 hour percent increases in the total number of confirmed COVID-19 cases by state. These data show the percent increase in total cases by state over a 36 hour period expressed as the date range indicated by the specifc figure. The US heatmaps (left) show the 36 hour percent increase within a state as a red color gradient where darker red indicates a greater percent increase. Bar charts (right) illustrate the ten states with the highest percent increase in COVID-19 cases between the 36 hours of measurement.
+
+## 3/21/20-3/24/20
+
+```{r 16Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
+knitr::include_graphics("./heat_maps/p_increase_cases_21_to_24.png")
+knitr::include_graphics("./bar_charts/three_day_perc_increase_3_21_to_3_24_bar.png")
 ```
 
 # Contact Information
