@@ -26,23 +26,23 @@ These data illustrate the CCSE reported confirmed COVID-19 cases by state. The U
 ## 3/24/2020
 
 ```{r 8Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
-knitr::include_graphics("../heat_maps/case_state_3_24.png")
-knitr::include_graphics("../bar_charts/cases_3_24_bar.png")
+knitr::include_graphics("./heat_maps/case_state_3_24.png")
+knitr::include_graphics("./bar_charts/cases_3_24_bar.png")
 ```
 
 ## 3/23/2020
 
 ```{r 6Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
-knitr::include_graphics("../heat_maps/case_state_3_23.png")
-knitr::include_graphics("../bar_charts/cases_3_23_bar.png")
+knitr::include_graphics("./heat_maps/case_state_3_23.png")
+knitr::include_graphics("./bar_charts/cases_3_23_bar.png")
 ```
 
 
 ## 3/22/2020
 
 ```{r 3Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
-knitr::include_graphics("../heat_maps/case_state_3_22.png")
-knitr::include_graphics("../bar_charts/cases_3_22_bar.png")
+knitr::include_graphics("./heat_maps/case_state_3_22.png")
+knitr::include_graphics("./bar_charts/cases_3_22_bar.png")
 
 ```
 
@@ -55,22 +55,22 @@ These data illustrate  the number of confirmed COVID-19 by state as the number o
 ## 3/24/2020
 
 ```{r 9Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
-knitr::include_graphics("../heat_maps/cases_100k_3_24.png")
-knitr::include_graphics("../bar_charts/cases_100k_3_24_bar.png")
+knitr::include_graphics("./heat_maps/cases_100k_3_24.png")
+knitr::include_graphics("./bar_charts/cases_100k_3_24_bar.png")
 ```
 
 ## 3/23/2020
 
 ```{r 5Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
-knitr::include_graphics("../heat_maps/cases_100k_3_23.png")
-knitr::include_graphics("../bar_charts/cases_100k_3_23_bar.png")
+knitr::include_graphics("./heat_maps/cases_100k_3_23.png")
+knitr::include_graphics("./bar_charts/cases_100k_3_23_bar.png")
 ```
 
 ## 3/22/2020
 
 ```{r 2Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
-knitr::include_graphics("../heat_maps/cases_100k_3_22.png")
-knitr::include_graphics("../bar_charts/cases_100k_3_22_bar.png")
+knitr::include_graphics("./heat_maps/cases_100k_3_22.png")
+knitr::include_graphics("./bar_charts/cases_100k_3_22_bar.png")
 
 ```
 
@@ -83,23 +83,23 @@ These data illustrate  the daily percent increases in the total number of confir
 ## 3/23/2020-3/24/2020
 
 ```{r 10Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
-knitr::include_graphics("../heat_maps/p_increase_cases_23_to_24.png")
-knitr::include_graphics("../bar_charts/perc_increase_3_24_bar.png")
+knitr::include_graphics("./heat_maps/p_increase_cases_23_to_24.png")
+knitr::include_graphics("./bar_charts/perc_increase_3_24_bar.png")
 ```
 
 ## 3/22/2020-3/23/2020
 
 
 ```{r 4Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
-knitr::include_graphics("../heat_maps/p_increase_cases_22_to_23.png")
-knitr::include_graphics("../bar_charts/perc_increase_3_23_bar.png")
+knitr::include_graphics("./heat_maps/p_increase_cases_22_to_23.png")
+knitr::include_graphics("./bar_charts/perc_increase_3_23_bar.png")
 ```
 
 ## 3/21/2020-3/22/2020
 
 ```{r 1Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
-knitr::include_graphics("../heat_maps/p_increase_cases_21_to_22.png")
-knitr::include_graphics("../bar_charts/perc_increase_3_22_bar.png")
+knitr::include_graphics("./heat_maps/p_increase_cases_21_to_22.png")
+knitr::include_graphics("./bar_charts/perc_increase_3_22_bar.png")
 ```
 
 # Contact Information
