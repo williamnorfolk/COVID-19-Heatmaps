@@ -57,9 +57,9 @@ knitr::include_graphics("./heat_maps/p_increase_cases_21_to_22.png")
 knitr::include_graphics("./bar_charts/perc_increase_3_22_bar.png")
 ```
 
-# 36 Hour Percent Increase in Cases {.tabset}
+# 72 Hour Percent Increase in Cases {.tabset}
 
-These data illustrate the 36 hour percent increases in the total number of confirmed COVID-19 cases by state. These data show the percent increase in total cases by state over a 36 hour period expressed as the date range indicated by the specifc figure. The US heatmaps (left) show the 36 hour percent increase within a state as a red color gradient where darker red indicates a greater percent increase. Bar charts (right) illustrate the ten states with the highest percent increase in COVID-19 cases between the 36 hours of measurement.
+These data illustrate the 72 hour percent increases in the total number of confirmed COVID-19 cases by state. These data show the percent increase in total cases by state over a 72 hour period expressed as the date range indicated by the specifc figure. The US heatmaps (left) show the 72 hour percent increase within a state as a red color gradient where darker red indicates a greater percent increase. Bar charts (right) illustrate the ten states with the highest percent increase in COVID-19 cases between the 72 hours of measurement.
 
 ## 3/21/20-3/24/20
 
