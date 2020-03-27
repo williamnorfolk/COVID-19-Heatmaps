@@ -104,8 +104,9 @@ top_ten_cases <- rbind(ext_1, ext_2, ext_3, ext_4, ext_5, ext_6, ext_7, ext_8, e
 #make bar chart
 #MODIFY: all cases variables to correct date and ggtitle
 cases_3_26_bar <- ggplot(top_ten_cases, aes(x = reorder(Province_State, -cases_3_26), cases_3_26)) + geom_bar(aes(fill = reorder(Province_State, -cases_3_26)),stat = "identity") + theme(axis.text.x = element_text(angle = 45, hjust = 1),
-                                                                                                   legend.position = "none",                                                                        axis.text=element_text(size=10),
-  panel.border = element_blank(),
+                                                                                                   legend.position = "none",                                                                        axis.text=element_text(size=12),
+  panel.border = element_blank(), 
+  axis.title.y = element_text(size = 12),
   panel.grid.major = element_blank(),
   panel.grid.minor = element_blank(),
   axis.line = element_line(colour = "black"),
@@ -222,8 +223,9 @@ top_ten_cases_100k <- rbind(extk_1, extk_2, extk_3, extk_4, extk_5, extk_6, extk
 #Modify: object dates and variable dates
 
 cases_100k_3_26_bar <- ggplot(top_ten_cases_100k, aes(x = reorder(Province_State, -cases_100k_26), cases_100k_26)) + geom_bar(aes(fill = reorder(Province_State, -cases_100k_26)), stat = "identity") + theme(axis.text.x = element_text(angle = 45, hjust = 1),
-                                                                                                   legend.position = "none",                                                                        axis.text=element_text(size=10),
-  panel.border = element_blank(),
+                                                                                                   legend.position = "none",                                                                        axis.text=element_text(size=12),
+  panel.border = element_blank(),   
+  axis.title.y = element_text(size = 12),
   panel.grid.major = element_blank(),
   panel.grid.minor = element_blank(),
   axis.line = element_line(colour = "black"),
@@ -268,8 +270,9 @@ top_ten_perc_increase <- rbind(extp_1, extp_2, extp_3, extp_4, extp_5, extp_6, e
 #Modify: object dates and variable dates
 
 perc_increase_3_26_bar <- ggplot(top_ten_perc_increase, aes(x = reorder(Province_State, -percent_increase), percent_increase)) + geom_bar(aes(fill = reorder(Province_State, -percent_increase)), stat = "identity") + theme(axis.text.x = element_text(angle = 45, hjust = 1),
-                                                                                                   legend.position = "none",                                                                        axis.text=element_text(size=10),
-  panel.border = element_blank(),
+                                                                                                   legend.position = "none",                                                                        axis.text=element_text(size=12),
+  panel.border = element_blank(),   
+  axis.title.y = element_text(size = 12),
   panel.grid.major = element_blank(),
   panel.grid.minor = element_blank(),
   axis.line = element_line(colour = "black"),
