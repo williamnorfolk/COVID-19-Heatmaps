@@ -162,6 +162,8 @@ All data, code, and associated processing objects used to create these analyses 
 
 To request additional information or inquire with further questions about the data, code, or visualizations produced here please email william.norfolk@uga.edu.
 
+```{r 10000Fig, fig.hold='hold', out.height = "50%", out.width = "50%", fig.align='right', echo=FALSE}
+knitr::include_graphics("./publicHealthlogo.png")
 
-
+```
 

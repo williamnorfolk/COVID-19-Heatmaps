@@ -70,6 +70,29 @@ merge_new <- merge_new[, c(1,5,6,7,8:19,2,3,4)]
 #saveRDS(merge_new, file = "./clean_covid_data.rds")
 ```
 
+## GA ONLY
+
+```{r}
+ga_only <- subset(covid_3_23, Province_State == "Georgia")
+
+```
+
+```{r}
+ga_pull_vars <- ga_only %>% dplyr::select(c(-Country_Region, -Last_Update, -Lat, -Long_, -Combined_Key))
+```
+
+```{r}
+#Match up names
+ga_fix_vars <- ga_pull_vars %>% rename(ga_cases_3_23 = Confirmed, ga_deaths_3_23 = Deaths, ga_recov_3_23 = Recovered, ga_active_3_23 = Active, fips = FIPS)
+```
+
+```{r}
+#save master clean data to add new values
+#Only uncommnet to update RDS
+
+#saveRDS(ga_fix_vars, file = "../ga_only_clean_data.rds")
+```
+
 #### Barcharts
 
 ```{r}
@@ -269,5 +292,7 @@ perc_increase_3_23_bar
 ```{r}
 ggsave(filename = "../bar_charts/perc_increase_3_23_bar.png", plot = perc_increase_3_23_bar)
 ```
+
+
 
 

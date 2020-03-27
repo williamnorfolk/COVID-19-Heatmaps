@@ -72,6 +72,204 @@ merge_new <- merge_new[, c(1,5,6,7,8:22,2,3,4)]
 #saveRDS(merge_new, file = "../clean_covid_data.rds")
 ```
 
+## GA ONLY
+
+```{r}
+ga_only <- subset(covid_3_24, Province_State == "Georgia")
+
+```
+
+```{r}
+ga_pull_vars <- ga_only %>% dplyr::select(c(-Country_Region, -Last_Update, -Lat, -Long_, -Combined_Key))
+```
+
+```{r}
+#Match up names
+ga_fix_vars <- ga_pull_vars %>% rename(ga_cases_3_24 = Confirmed, ga_deaths_3_24 = Deaths, ga_recov_3_24 = Recovered, ga_active_3_24 = Active, fips = FIPS)
+```
+
+```{r}
+ga_master <- readRDS("../ga_only_clean_data.rds")
+```
+
+```{r}
+#Merge new data into master set.
+ga_master <- merge(ga_master, ga_fix_vars)
+```
+
+```{r}
+#Add total populaton
+#As of July 1 2019 Estimates by US Census
+ga_master <- ga_master %>% dplyr::mutate(county_pop = recode(Admin2,
+                                                                 "Fulton" = 1021902,
+                                                                 "Gwinnett" = 902298,
+                                                                 "Cobb" = 745057,
+                                                                 "DeKalb" = 743187,
+                                                                 "Chatham" = 287049,
+                                                                 "Clayton" = 278666,
+                                                                 "Cherokee" = 241910,
+                                                                 "Henry" = 221307,
+                                                                 "Forsyth" = 219880,
+                                                                 "Richmond" = 201463,
+                                                                 "Muscogee" = 196670,
+                                                                 "Hall" = 195961,
+                                                                 "Paulding" = 155840,
+                                                                 "Bibb" = 153490,
+                                                                 "Huston" = 151682,
+                                                                 "Columbia" = 147295,
+                                                                 "Douglas" = 141840,
+                                                                 "Coweta" = 140516,
+                                                                 "Clarke" = 124602,
+                                                                 "Carroll" = 116022,
+                                                                 "Lowndes" = 114582,
+                                                                 "Fayette" = 111369,
+                                                                 "Newton" = 106497,
+                                                                 "Whitfield" = 103849,
+                                                                 "Bartow" = 103620,
+                                                                 "Floyd" = 96824,
+                                                                 "Dougherty" = 91049,
+                                                                 "Walton" = 90132,
+                                                                 "Rockdale" = 89011,
+                                                                 "Glynn" = 83974,
+                                                                 "Barrow" = 76887,
+                                                                 "Bulloch" = 74782,
+                                                                 "Troup" = 69774,
+                                                                 "Walker" = 68824,
+                                                                 "Catoosa" = 66299,
+                                                                 "Jackson" = 65755,
+                                                                 "Spalding" = 64719,
+                                                                 "Liberty" = 62108,
+                                                                 "Effingham" = 58689,
+                                                                 "Gordon" = 56790,
+                                                                 "Camden" = 52714,
+                                                                 "Laurens" = 47418,
+                                                                 "Colquitt" = 45606,
+                                                                 "Baldwin" = 45286,
+                                                                 "Thomas" = 44730,
+                                                                 "Habersham" = 44289,
+                                                                 "Coffee" = 42961,
+                                                                 "Polk" = 41621,
+                                                                 "Tift" = 40510,
+                                                                 "Murray" = 39557, 
+                                                                 "Oconee" = 37017,
+                                                                 "Bryan" = 35885,
+                                                                 "Ware" = 35599,
+                                                             "Harris" = 33590,
+                                                             "Lumpkin" = 31951,
+                                                             "Pickens" = 30832,
+                                                             "Sumter" = 30352,
+                                                             "Gilmer" = 29922,
+                                                             "Wayne" = 29767,
+                                                             "Lee" = 29348,
+                                                             "Haralson" = 28956,
+                                                             "White" = 28928,
+                                                             "Madison" = 28900,
+                                                             "Jones" = 28548,
+                                                             "Toombs" = 27048,
+                                                             "Monroe" = 27010,
+                                                             "Peach" = 26966,
+                                                             "Decatur" = 26833,
+                                                             "Upson" = 26216,
+                                                             "Stephens" = 25676,
+                                                             "Hart" = 25631,
+                                                             "Tattnall" = 25353,
+                                                             "Grady" = 24926,
+                                                             "Fannin" = 24925,
+                                                             "Chattooga" = 24817,
+                                                             "Dawson" = 23861,
+                                                             "Butts" = 23750,
+                                                             "Crisp" = 22846,
+                                                             "Union" = 22775,
+                                                             "Burke" = 22550,
+                                                             "Franklin" = 22514,
+                                                             "Emanuel" = 22499,
+                                                             "Mitchell" = 22432,
+                                                             "Putnam" = 21503,
+                                                             "McDuffie" = 21498,
+                                                             "Meriwether" = 21113,
+                                                             "Dodge" = 20919,
+                                                             "Worth" = 20656,
+                                                             "Washington" = 20461,
+                                                             "Elbert" = 19212,
+                                                             "Pierce" = 19164,
+                                                             "Berrien" = 19025,
+                                                             "Brantley" = 18561,
+                                                             "Lamar" = 18513,
+                                                             "Banks" = 18510,
+                                                             "Appling" = 18454,
+                                                             "Morgan" = 18235,
+                                                             "Long" = 18156,
+                                                             "Pike" = 18082,
+                                                             "Cook" = 17184,
+                                                             "Ben Hill" = 17154,
+                                                             "Greene" = 16976,
+                                                             "Rabun" = 16457,
+                                                             "Dade" = 16227,
+                                                             "Telfair" = 16115,
+                                                             "Jefferson" = 15772,
+                                                             "Brooks" = 15622,
+                                                             "Jeff Davis" = 14991,
+                                                             "Oglethorpe" = 14784,
+                                                             "McIntosh" = 14120,
+                                                             "Screven" = 13990,
+                                                             "Dooly" = 13905,
+                                                             "Jasper" = 13784,
+                                                             "Macon" = 13480,
+                                                             "Charlton" = 12983,
+                                                             "Bleckley" = 12775,
+                                                             "Crawford" = 12344,
+                                                             "Heard" = 11677,
+                                                             "Towns" = 11417,
+                                                             "Pulaski" = 11295,
+                                                             "Bacon" = 11228,
+                                                             "Candler" = 10827,
+                                                             "Chattahoochee" = 10767,
+                                                             "Evans" = 10727,
+                                                             "Lanier" = 10366,
+                                                             "Early" = 10348,
+                                                             "Wilkes" = 9884,
+                                                             "Johnson" = 9730,
+                                                             "Irwin" = 9268,
+                                                             "Wilkinson" = 9078,
+                                                             "Montgomery" = 9036,
+                                                             "Terrell" = 8859,
+                                                             "Wilcox" = 8846,
+                                                             "Jenkins" = 8827,
+                                                             "Hancock" = 8535,
+                                                             "Marion" = 8484,
+                                                             "Seminole" = 8437,
+                                                             "Twiggs" = 8284,
+                                                             "Atkinson" = 8265,
+                                                             "Taylor" = 8193,
+                                                             "Turner" = 7962,
+                                                             "Wheeler" = 7939,
+                                                             "Lincoln" = 7799,
+                                                             "Randolph" = 7087,
+                                                             "Treutlen" = 6777,
+                                                             "Clinch" = 6743,
+                                                             "Calhoun" = 6428,
+                                                             "Talbot" = 6378,
+                                                             "Stewart" = 6042,
+                                                             "Miller" = 5836,
+                                                             "Warren" = 5346,
+                                                             "Schley" = 5211,
+                                                             "Echols" = 3994,
+                                                             "Baker" = 3189,
+                                                             "Glascock" = 3009,
+                                                             "Clay" = 3001,
+                                                             "Webster" = 2613,
+                                                             "Quitman" = 2276,
+                                                             "Taliaferro" = 1665))
+```
+
+```{r}
+#save master clean data to add new values
+#Only uncommnet to update RDS
+
+#saveRDS(ga_master, file = "../ga_only_clean_data.rds")
+```
+
+
 #### CHART START
 
 ```{r}
