@@ -142,7 +142,7 @@ only_22_and_23 <- subset(merge_new, select = c(Province_State, cases_3_22, cases
 #add percent increase
 #UPDATE DAILY with new data
 
-only_22_and_23 <- only_22_and_23 %>% dplyr::mutate(percent_increase = (cases_3_23 - cases_3_22) / cases_3_23 * 100)
+only_22_and_23 <- only_22_and_23 %>% dplyr::mutate(percent_increase = (cases_3_23 - cases_3_22) / cases_3_22 * 100)
 ```
 
 ```{r}

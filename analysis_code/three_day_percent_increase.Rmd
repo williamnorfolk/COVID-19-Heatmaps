@@ -32,7 +32,7 @@ only_21_and_24 <- subset(covid_master, select = c(Province_State, cases_3_21, ca
 #add percent increase
 #MODIFY: object dates and variable dates.
 
-only_21_and_24 <- only_21_and_24 %>% dplyr::mutate(percent_increase = (cases_3_24 - cases_3_21) / cases_3_24 * 100)
+only_21_and_24 <- only_21_and_24 %>% dplyr::mutate(percent_increase = (cases_3_24 - cases_3_21) / cases_3_21 * 100)
 ```
 
 ```{r}

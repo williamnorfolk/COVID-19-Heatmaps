@@ -264,7 +264,7 @@ only_21_and_22 <- subset(add_fips, select = c(`Province/State`, `Country/Region`
 #add percent increase
 #UPDATE DAILY with new data
 
-only_21_and_22 <- only_21_and_22 %>% dplyr::mutate(percent_increase = (cases_3_22 - cases_3_21) / cases_3_22 * 100)
+only_21_and_22 <- only_21_and_22 %>% dplyr::mutate(percent_increase = (cases_3_22 - cases_3_21) / cases_3_21 * 100)
 ```
 
 ```{r}
