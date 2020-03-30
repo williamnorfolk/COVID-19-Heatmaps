@@ -84,11 +84,40 @@ knitr::include_graphics("./bar_charts/perc_increase_3_22_bar.png")
 
 These data illustrate the 72-hour percent increase in the total number of confirmed COVID-19 cases by state. These data show the percent increase in total cases by state over a 72-hour period expressed as the date range indicated by the specific figure. The US heatmaps (left) show the 72-hour percent increase within a state as a red color gradient where darker red indicates a greater percent increase. Bar charts (right) illustrate the ten states with the highest percent increase in COVID-19 cases between the 72 hours of measurement.
 
+## 3/26/20-3/29/20
+
+```{r 33Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
+knitr::include_graphics("./heat_maps/p_increase_cases_26_to_29.png")
+knitr::include_graphics("./bar_charts/three_day_perc_increase_3_26_to_3_29_bar.png")
+```
+
+## 3/25/20-3/28/20
+
+```{r 34Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
+knitr::include_graphics("./heat_maps/p_increase_cases_25_to_28.png")
+knitr::include_graphics("./bar_charts/three_day_perc_increase_3_25_to_3_28_bar.png")
+```
+
 ## 3/24/20-3/27/20
 
 ```{r 23Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
 knitr::include_graphics("./heat_maps/p_increase_cases_24_to_27.png")
 knitr::include_graphics("./bar_charts/three_day_perc_increase_3_24_to_3_27_bar.png")
+```
+
+
+## 3/23/20-3/26/20
+
+```{r 32Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
+knitr::include_graphics("./heat_maps/p_increase_cases_23_to_26.png")
+knitr::include_graphics("./bar_charts/three_day_perc_increase_3_23_to_3_26_bar.png")
+```
+
+## 3/22/20-3/25/20
+
+```{r 31Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
+knitr::include_graphics("./heat_maps/p_increase_cases_22_to_25.png")
+knitr::include_graphics("./bar_charts/three_day_perc_increase_3_22_to_3_25_bar.png")
 ```
 
 ## 3/21/20-3/24/20

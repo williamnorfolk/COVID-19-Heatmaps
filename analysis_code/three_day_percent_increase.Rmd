@@ -97,6 +97,163 @@ three_day_perc_increase_3_21_to_3_24_bar
 ggsave(filename = "../bar_charts/three_day_perc_increase_3_21_to_3_24_bar.png", plot = three_day_perc_increase_3_21_to_3_24_bar)
 ```
 
+## 3/22-3/25
+
+```{r}
+#To determine percent increase from prior day, include only last two observations
+#MODIFY: object dates and variable dates.
+
+only_22_and_25 <- subset(covid_master, select = c(Province_State, cases_3_22, cases_3_25, fips, total_pop))
+```
+
+
+```{r}
+#add percent increase
+#MODIFY: object dates and variable dates.
+
+only_22_and_25 <- only_22_and_25 %>% dplyr::mutate(percent_increase = (cases_3_25 - cases_3_22) / cases_3_22 * 100)
+```
+
+```{r}
+#make heatmap of percent increase
+
+p_increase_cases_22_to_25 <- plot_usmap(data = only_22_and_25, values = "percent_increase", color = "black") + 
+  
+  scale_fill_continuous(low = "white", high = "red", name = "Percent Increase", label = scales::comma) + theme(legend.position = "right", plot.title = element_text(color = "black", size = 15, face = "bold"), plot.subtitle = element_text(color = "black", size = 10, face = "italic")) + labs(title = "Percent Increase of Confirmed COVID-19 Cases by State", subtitle = "From: 3/22/2020-3/25/2020")
+
+p_increase_cases_22_to_25
+```
+
+```{r}
+ggsave(filename = "../heat_maps/p_increase_cases_22_to_25.png", plot = p_increase_cases_22_to_25)
+```
+
+
+```{r}
+#Take a look at the top 10 percent increases
+#MODIFY: cases variable for new date
+tail(sort(only_22_and_25$percent_increase ),10)
+```
+
+```{r}
+#subset top 10 cases
+#subset top 10 100K
+#MODIFY: must search ten above individually (subset does not allow to select by these values for some reason...) and past the states in the code below.Also modify variable and object date names.
+
+extp_1 <- subset(only_22_and_25, Province_State == "Vermont")
+extp_2 <- subset(only_22_and_25, Province_State == "Oklahoma")
+extp_3 <- subset(only_22_and_25, Province_State == "Pennsylvania")
+extp_4 <- subset(only_22_and_25, Province_State == "Delaware")
+extp_5 <- subset(only_22_and_25, Province_State == "Arizona")
+extp_6 <- subset(only_22_and_25, Province_State == "Alabama")
+extp_7 <- subset(only_22_and_25, Province_State == "Massachusetts")
+extp_8 <- subset(only_22_and_25, Province_State == "West Virginia")
+extp_9 <- subset(only_22_and_25, Province_State == "Missouri")
+extp_10 <- subset(only_22_and_25, Province_State == "Connecticut")
+
+top_ten_perc_increase <- rbind(extp_1, extp_2, extp_3, extp_4, extp_5, extp_6, extp_7, extp_8, extp_9, extp_10)
+```
+
+```{r}
+#make bar chart
+#Modify: object dates and variable dates
+
+three_day_perc_increase_3_22_to_3_25_bar <- ggplot(top_ten_perc_increase, aes(x = reorder(Province_State, -percent_increase), percent_increase)) + geom_bar(aes(fill = reorder(Province_State, -percent_increase)), stat = "identity") + theme(axis.text.x = element_text(angle = 45, hjust = 1),
+                                                                                                   legend.position = "none",                                                                        axis.text=element_text(size=12),                                                                 axis.title.y = element_text(size = 12),
+  panel.border = element_blank(),
+  panel.grid.major = element_blank(),
+  panel.grid.minor = element_blank(),
+  axis.line = element_line(colour = "black"),
+  panel.background = element_blank()) + xlab("") + ylab("Percent Increase") + ggtitle("COVID-19: Top Ten Percent Increase by State From 3/22/2020-3/25/2020") +
+  
+   geom_text(aes(label = round(percent_increase, 2)), size = 4, position = position_stack(vjust = 0.8))
+
+three_day_perc_increase_3_22_to_3_25_bar
+```
+
+```{r}
+ggsave(filename = "../bar_charts/three_day_perc_increase_3_22_to_3_25_bar.png", plot = three_day_perc_increase_3_22_to_3_25_bar)
+```
+
+
+## 3/23-3/26
+
+```{r}
+#To determine percent increase from prior day, include only last two observations
+#MODIFY: object dates and variable dates.
+
+only_23_and_26 <- subset(covid_master, select = c(Province_State, cases_3_23, cases_3_26, fips, total_pop))
+```
+
+
+```{r}
+#add percent increase
+#MODIFY: object dates and variable dates.
+
+only_23_and_26 <- only_23_and_26 %>% dplyr::mutate(percent_increase = (cases_3_26 - cases_3_23) / cases_3_23 * 100)
+```
+
+```{r}
+#make heatmap of percent increase
+
+p_increase_cases_23_to_26 <- plot_usmap(data = only_23_and_26, values = "percent_increase", color = "black") + 
+  
+  scale_fill_continuous(low = "white", high = "red", name = "Percent Increase", label = scales::comma) + theme(legend.position = "right", plot.title = element_text(color = "black", size = 15, face = "bold"), plot.subtitle = element_text(color = "black", size = 10, face = "italic")) + labs(title = "Percent Increase of Confirmed COVID-19 Cases by State", subtitle = "From: 3/23/2020-3/26/2020")
+
+p_increase_cases_23_to_26
+```
+
+```{r}
+ggsave(filename = "../heat_maps/p_increase_cases_23_to_26.png", plot = p_increase_cases_23_to_26)
+```
+
+
+```{r}
+#Take a look at the top 10 percent increases
+#MODIFY: cases variable for new date
+tail(sort(only_23_and_26$percent_increase ),10)
+```
+
+```{r}
+#subset top 10 cases
+#subset top 10 100K
+#MODIFY: must search ten above individually (subset does not allow to select by these values for some reason...) and past the states in the code below.Also modify variable and object date names.
+
+extp_1 <- subset(only_23_and_26, Province_State == "Indiana")
+extp_2 <- subset(only_23_and_26, Province_State == "New Jersey")
+extp_3 <- subset(only_23_and_26, Province_State == "Connecticut")
+extp_4 <- subset(only_23_and_26, Province_State == "Pennsylvania")
+extp_5 <- subset(only_23_and_26, Province_State == "Alabama")
+extp_6 <- subset(only_23_and_26, Province_State == "Montana")
+extp_7 <- subset(only_23_and_26, Province_State == "Missouri")
+extp_8 <- subset(only_23_and_26, Province_State == "Oklahoma")
+extp_9 <- subset(only_23_and_26, Province_State == "Massachusetts")
+extp_10 <- subset(only_23_and_26, Province_State == "West Virginia	")
+
+top_ten_perc_increase <- rbind(extp_1, extp_2, extp_3, extp_4, extp_5, extp_6, extp_7, extp_8, extp_9, extp_10)
+```
+
+```{r}
+#make bar chart
+#Modify: object dates and variable dates
+
+three_day_perc_increase_3_23_to_3_26_bar <- ggplot(top_ten_perc_increase, aes(x = reorder(Province_State, -percent_increase), percent_increase)) + geom_bar(aes(fill = reorder(Province_State, -percent_increase)), stat = "identity") + theme(axis.text.x = element_text(angle = 45, hjust = 1),
+                                                                                                   legend.position = "none",                                                                        axis.text=element_text(size=12),                                                                 axis.title.y = element_text(size = 12),
+  panel.border = element_blank(),
+  panel.grid.major = element_blank(),
+  panel.grid.minor = element_blank(),
+  axis.line = element_line(colour = "black"),
+  panel.background = element_blank()) + xlab("") + ylab("Percent Increase") + ggtitle("COVID-19: Top Ten Percent Increase by State From 3/23/2020-3/26/2020") +
+  
+   geom_text(aes(label = round(percent_increase, 2)), size = 4, position = position_stack(vjust = 0.8))
+
+three_day_perc_increase_3_23_to_3_26_bar
+```
+
+```{r}
+ggsave(filename = "../bar_charts/three_day_perc_increase_3_23_to_3_26_bar.png", plot = three_day_perc_increase_3_23_to_3_26_bar)
+```
+
 ## 3/24-3/27
 
 ```{r}
@@ -173,4 +330,160 @@ three_day_perc_increase_3_24_to_3_27_bar
 
 ```{r}
 ggsave(filename = "../bar_charts/three_day_perc_increase_3_24_to_3_27_bar.png", plot = three_day_perc_increase_3_24_to_3_27_bar)
+```
+
+## 3/25-3/28
+
+```{r}
+#To determine percent increase from prior day, include only last two observations
+#MODIFY: object dates and variable dates.
+
+only_25_and_28 <- subset(covid_master, select = c(Province_State, cases_3_25, cases_3_28, fips, total_pop))
+```
+
+
+```{r}
+#add percent increase
+#MODIFY: object dates and variable dates.
+
+only_25_and_28 <- only_25_and_28 %>% dplyr::mutate(percent_increase = (cases_3_28 - cases_3_25) / cases_3_25 * 100)
+```
+
+```{r}
+#make heatmap of percent increase
+
+p_increase_cases_25_to_28 <- plot_usmap(data = only_25_and_28, values = "percent_increase", color = "black") + 
+  
+  scale_fill_continuous(low = "white", high = "red", name = "Percent Increase", label = scales::comma) + theme(legend.position = "right", plot.title = element_text(color = "black", size = 15, face = "bold"), plot.subtitle = element_text(color = "black", size = 10, face = "italic")) + labs(title = "Percent Increase of Confirmed COVID-19 Cases by State", subtitle = "From: 3/25/2020-3/28/2020")
+
+p_increase_cases_25_to_28
+```
+
+```{r}
+ggsave(filename = "../heat_maps/p_increase_cases_25_to_28.png", plot = p_increase_cases_25_to_28)
+```
+
+
+```{r}
+#Take a look at the top 10 percent increases
+#MODIFY: cases variable for new date
+tail(sort(only_25_and_28$percent_increase ),10)
+```
+
+```{r}
+#subset top 10 cases
+#subset top 10 100K
+#MODIFY: must search ten above individually (subset does not allow to select by these values for some reason...) and past the states in the code below.Also modify variable and object date names.
+
+extp_1 <- subset(only_25_and_28, Province_State == "Florida")
+extp_2 <- subset(only_25_and_28, Province_State == "Pennsylvania")
+extp_3 <- subset(only_25_and_28, Province_State == "Oklahoma")
+extp_4 <- subset(only_25_and_28, Province_State == "Massachusetts")
+extp_5 <- subset(only_25_and_28, Province_State == "Maryland")
+extp_6 <- subset(only_25_and_28, Province_State == "Missouri")
+extp_7 <- subset(only_25_and_28, Province_State == "West Virginia")
+extp_8 <- subset(only_25_and_28, Province_State == "New Jersey")
+extp_9 <- subset(only_25_and_28, Province_State == "Idaho")
+extp_10 <- subset(only_25_and_28, Province_State == "Indiana")
+
+top_ten_perc_increase <- rbind(extp_1, extp_2, extp_3, extp_4, extp_5, extp_6, extp_7, extp_8, extp_9, extp_10)
+```
+
+```{r}
+#make bar chart
+#Modify: object dates and variable dates
+
+three_day_perc_increase_3_25_to_3_28_bar <- ggplot(top_ten_perc_increase, aes(x = reorder(Province_State, -percent_increase), percent_increase)) + geom_bar(aes(fill = reorder(Province_State, -percent_increase)), stat = "identity") + theme(axis.text.x = element_text(angle = 45, hjust = 1),
+                                                                                                   legend.position = "none",                                                                        axis.text=element_text(size=12),                                                                 axis.title.y = element_text(size = 12),
+  panel.border = element_blank(),
+  panel.grid.major = element_blank(),
+  panel.grid.minor = element_blank(),
+  axis.line = element_line(colour = "black"),
+  panel.background = element_blank()) + xlab("") + ylab("Percent Increase") + ggtitle("COVID-19: Top Ten Percent Increase by State From 3/25/2020-3/28/2020") +
+  
+   geom_text(aes(label = round(percent_increase, 2)), size = 4, position = position_stack(vjust = 0.8))
+
+three_day_perc_increase_3_25_to_3_28_bar
+```
+
+```{r}
+ggsave(filename = "../bar_charts/three_day_perc_increase_3_25_to_3_28_bar.png", plot = three_day_perc_increase_3_25_to_3_28_bar)
+```
+
+## 3/26-3/29
+
+```{r}
+#To determine percent increase from prior day, include only last two observations
+#MODIFY: object dates and variable dates.
+
+only_26_and_29 <- subset(covid_master, select = c(Province_State, cases_3_26, cases_3_29, fips, total_pop))
+```
+
+
+```{r}
+#add percent increase
+#MODIFY: object dates and variable dates.
+
+only_26_and_29 <- only_26_and_29 %>% dplyr::mutate(percent_increase = (cases_3_29 - cases_3_26) / cases_3_26 * 100)
+```
+
+```{r}
+#make heatmap of percent increase
+
+p_increase_cases_26_to_29 <- plot_usmap(data = only_26_and_29, values = "percent_increase", color = "black") + 
+  
+  scale_fill_continuous(low = "white", high = "red", name = "Percent Increase", label = scales::comma) + theme(legend.position = "right", plot.title = element_text(color = "black", size = 15, face = "bold"), plot.subtitle = element_text(color = "black", size = 10, face = "italic")) + labs(title = "Percent Increase of Confirmed COVID-19 Cases by State", subtitle = "From: 3/26/2020-3/29/2020")
+
+p_increase_cases_26_to_29
+```
+
+```{r}
+ggsave(filename = "../heat_maps/p_increase_cases_26_to_29.png", plot = p_increase_cases_26_to_29)
+```
+
+
+```{r}
+#Take a look at the top 10 percent increases
+#MODIFY: cases variable for new date
+tail(sort(only_26_and_29$percent_increase ),10)
+```
+
+```{r}
+#subset top 10 cases
+#subset top 10 100K
+#MODIFY: must search ten above individually (subset does not allow to select by these values for some reason...) and past the states in the code below.Also modify variable and object date names.
+
+extp_1 <- subset(only_26_and_29, Province_State == "Michigan")
+extp_2 <- subset(only_26_and_29, Province_State == "New Jersey")
+extp_3 <- subset(only_26_and_29, Province_State == "South Dakota")
+extp_4 <- subset(only_26_and_29, Province_State == "Connecticut")
+extp_5 <- subset(only_26_and_29, Province_State == "Massachusetts")
+extp_6 <- subset(only_26_and_29, Province_State == "New Mexico")
+extp_7 <- subset(only_26_and_29, Province_State == "Maryland")
+extp_8 <- subset(only_26_and_29, Province_State == "West Virginia")
+extp_9 <- subset(only_26_and_29, Province_State == "Nevada")
+extp_10 <- subset(only_26_and_29, Province_State == "Indiana")
+
+top_ten_perc_increase <- rbind(extp_1, extp_2, extp_3, extp_4, extp_5, extp_6, extp_7, extp_8, extp_9, extp_10)
+```
+
+```{r}
+#make bar chart
+#Modify: object dates and variable dates
+
+three_day_perc_increase_3_26_to_3_29_bar <- ggplot(top_ten_perc_increase, aes(x = reorder(Province_State, -percent_increase), percent_increase)) + geom_bar(aes(fill = reorder(Province_State, -percent_increase)), stat = "identity") + theme(axis.text.x = element_text(angle = 45, hjust = 1),
+                                                                                                   legend.position = "none",                                                                        axis.text=element_text(size=12),                                                                 axis.title.y = element_text(size = 12),
+  panel.border = element_blank(),
+  panel.grid.major = element_blank(),
+  panel.grid.minor = element_blank(),
+  axis.line = element_line(colour = "black"),
+  panel.background = element_blank()) + xlab("") + ylab("Percent Increase") + ggtitle("COVID-19: Top Ten Percent Increase by State From 3/26/2020-3/29/2020") +
+  
+   geom_text(aes(label = round(percent_increase, 2)), size = 4, position = position_stack(vjust = 0.8))
+
+three_day_perc_increase_3_26_to_3_29_bar
+```
+
+```{r}
+ggsave(filename = "../bar_charts/three_day_perc_increase_3_26_to_3_29_bar.png", plot = three_day_perc_increase_3_26_to_3_29_bar)
 ```
