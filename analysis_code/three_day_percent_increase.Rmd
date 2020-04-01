@@ -19,6 +19,12 @@ library(viridis)
 covid_master <- readRDS("../clean_covid_data.rds")
 ```
 
+```{r}
+total_pop <- readxl::read_excel("../us_pop.xlsx")
+#saveRDS(total_pop, file = "../total_pop.rds")
+```
+
+
 ## 3/21-3/24
 
 ```{r}
