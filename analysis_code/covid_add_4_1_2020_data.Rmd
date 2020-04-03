@@ -183,7 +183,7 @@ only_31_and_1 <- only_31_and_1 %>% dplyr::mutate(case_100k_increase = (cases_100
 ```{r}
 #total cases per 100k population as of 3/23
 
-cases_100k_4_1 <- plot_usmap(data = only_31_and_1, values = "cases_100k_31", color = "black") + 
+cases_100k_4_1 <- plot_usmap(data = only_31_and_1, values = "cases_100k_1", color = "black") + 
   
   scale_fill_continuous(low = "white", high = "red", name = "Cases/100k Population", label = scales::comma) + theme(legend.position = "right", plot.title = element_text(color = "black", size = 15, face = "bold"), plot.subtitle = element_text(color = "black", size = 10, face = "italic")) + labs(title = "COVID-19 Confirmed Cases Per 100K Individuals by State", subtitle = "Data as of: 4/1/2020")
 
