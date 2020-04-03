@@ -19,6 +19,15 @@ library(viridis)
 covid_master <- readRDS("../clean_covid_data.rds")
 ```
 
+```{r}
+#merge_new <- covid_master
+```
+
+```{r}
+#merge_new$cases_4_1[43] <- 2683
+
+```
+
 
 ```{r}
 #load new data from update. MODIFY: data object date
@@ -255,7 +264,7 @@ tail(sort(only_31_and_1$percent_increase ),10)
 extp_1 <- subset(only_31_and_1, Province_State == "Pennsylvania")
 extp_2 <- subset(only_31_and_1, Province_State == "Michigan")
 extp_3 <- subset(only_31_and_1, Province_State == "Louisiana")
-extp_4 <- subset(only_31_and_1, Province_State == "Tennessee")
+extp_4 <- subset(only_31_and_1, Province_State == "Georgia")
 extp_5 <- subset(only_31_and_1, Province_State == "New Mexico")
 extp_6 <- subset(only_31_and_1, Province_State == "Missouri")
 extp_7 <- subset(only_31_and_1, Province_State == "Nebraska")
