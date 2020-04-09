@@ -81,6 +81,10 @@ merge_new <- merge_new[, c(1,5,6,7,8:64,2,3,4)]
 #### CHART START
 
 ```{r}
+merge_new<-covid_master
+```
+
+```{r}
 #Take a look at the top 10 cases
 #MODIFY: cases variable for new date
 top_10_cases <- tail(sort(merge_new$cases_4_7),10)
@@ -202,7 +206,7 @@ ggsave(filename = "../heat_maps/cases_100k_4_7.png", plot = cases_100k_4_7)
 ```{r}
 #Take a look at the top 10 cases per 100k
 #MODIFY: cases variable for new date
-tail(sort(only_6_and_7$cases_100k_6 ),10)
+tail(sort(only_6_and_7$cases_100k_7 ),10)
 ```
 
 
