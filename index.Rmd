@@ -23,6 +23,13 @@ Due to the changing nature of these data **please pay close attention to the hea
 
 These data illustrate the daily percent increase in the total number of confirmed COVID-19 cases by state. Daily percent increase measures the difference between the confirmed case total of the current day to the prior case total and expresses this difference as a percentage of the prior case total. The US heatmaps (left) show the daily percent increase within a state as a red color gradient where darker red indicates a greater percent increase. Bar charts (right) illustrate the ten states with the highest percent increase in COVID-19 cases between the 24 hours of measurement. It is important to note that daily percent increase is strongly influenced by the availability of COVID-19 testing and the prior number of confirmed cases within a state. Sudden spikes in percent increase on a given day may not necessarily reflect an increase in disease incidence, but rather an increase in the availability of testing.
 
+## 4/15/20-4/16/20
+
+```{r 114ig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
+knitr::include_graphics("./heat_maps/p_increase_cases_15_to_16.png")
+knitr::include_graphics("./bar_charts/perc_increase_4_16_bar.png")
+```
+
 ## 4/14/20-4/15/20
 
 ```{r 104ig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
@@ -203,6 +210,13 @@ knitr::include_graphics("./bar_charts/perc_increase_3_22_bar.png")
 
 These data illustrate the 72-hour percent increase in the total number of confirmed COVID-19 cases by state. These data show the percent increase in total cases by state over a 72-hour period expressed as the date range indicated by the specific figure. The US heatmaps (left) show the 72-hour percent increase within a state as a red color gradient where darker red indicates a greater percent increase. Bar charts (right) illustrate the ten states with the highest percent increase in COVID-19 cases between the 72 hours of measurement.
 
+## 4/13/20-4/16/20
+
+```{r 110Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
+knitr::include_graphics("./heat_maps/p_increase_cases_13_to_16.png")
+knitr::include_graphics("./bar_charts/three_day_perc_increase_4_13_to_4_16_bar.png")
+```
+
 ## 4/12/20-4/15/20
 
 ```{r 106Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
@@ -369,6 +383,13 @@ knitr::include_graphics("./bar_charts/three_day_perc_increase_3_21_to_3_24_bar.p
 # Daily Confirmed Cases {.tabset}
 
 These data illustrate the total confirmed COVID-19 cases by state. Total confirmed cases are comprised of all cases that have been validated by an approved laboratory test to meet the criteria for COVID-19 diagnosis. The US heatmaps (left) show the total cases per state as a red color gradient where darker red indicates a higher number of confirmed cases within the state. Bar charts (right) illustrate the ten states with the highest number of confirmed COVID-19 cases at the point of data publication.
+
+## 4/16/2020
+
+```{r 111Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
+knitr::include_graphics("./heat_maps/case_state_4_16.png")
+knitr::include_graphics("./bar_charts/cases_4_16_bar.png")
+```
 
 ## 4/15/2020
 
@@ -552,6 +573,13 @@ knitr::include_graphics("./bar_charts/cases_3_22_bar.png")
 # Cases Per 100k Population {.tabset}
 
 These data illustrate the number of confirmed COVID-19 by state as the number of cases per 100,000 individuals residing in that state according the US Census Bureau's 2019 July population estimate. The US heatmaps (left) show the cases per 100k individuals within a state as a red color gradient where darker red indicates a higher number of cases per 100k. Bar charts (right) illustrate  the ten states with the highest number of cases per 100k individuals at the point of data publication. State population data was obtained through the US Census Bureau website at this [link](https://www.census.gov/data/tables/time-series/demo/popest/2010s-state-total.html).
+
+## 4/16/2020
+
+```{r 112Fig, fig.hold='hold', out.height = "50%", out.width = "50%", echo=FALSE}
+knitr::include_graphics("./heat_maps/cases_100k_4_16.png")
+knitr::include_graphics("./bar_charts/cases_100k_4_16_bar.png")
+```
 
 ## 4/15/2020
 
