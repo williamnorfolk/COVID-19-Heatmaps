@@ -1343,16 +1343,16 @@ tail(sort(only_6_and_9$percent_increase ),10)
 #subset top 10 100K
 #MODIFY: must search ten above individually (subset does not allow to select by these values for some reason...) and past the states in the code below.Also modify variable and object date names.
 
-extp_1 <- subset(only_6_and_9, Province_State == "California")
-extp_2 <- subset(only_6_and_9, Province_State == "Alaska")
-extp_3 <- subset(only_6_and_9, Province_State == "Oregon")
-extp_4 <- subset(only_6_and_9, Province_State == "Alabama")
-extp_5 <- subset(only_6_and_9, Province_State == "Utah")
-extp_6 <- subset(only_6_and_9, Province_State == "North Carolina")
-extp_7 <- subset(only_6_and_9, Province_State == "South Carolina")
+extp_1 <- subset(only_6_and_9, Province_State == "Mississippi")
+extp_2 <- subset(only_6_and_9, Province_State == "Utah")
+extp_3 <- subset(only_6_and_9, Province_State == "Alabama")
+extp_4 <- subset(only_6_and_9, Province_State == "Alaska")
+extp_5 <- subset(only_6_and_9, Province_State == "North Carolina")
+extp_6 <- subset(only_6_and_9, Province_State == "Oregon")
+extp_7 <- subset(only_6_and_9, Province_State == "Arkansas")
 extp_8 <- subset(only_6_and_9, Province_State == "Michigan")
-extp_9 <- subset(only_6_and_9, Province_State == "Arkansas")
-extp_10 <- subset(only_6_and_9, Province_State == "Arizona")
+extp_9 <- subset(only_6_and_9, Province_State == "Arizona")
+extp_10 <- subset(only_6_and_9, Province_State == "South Carolina")
 
 top_ten_perc_increase <- rbind(extp_1, extp_2, extp_3, extp_4, extp_5, extp_6, extp_7, extp_8, extp_9, extp_10)
 ```
